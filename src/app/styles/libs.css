@@ -1,0 +1,200 @@
+@import url('~react-toastify/dist/ReactToastify.min.css');
+@import url('~nprogress/nprogress.css');
+@import url('~react-loading-skeleton/dist/skeleton.css');
+
+#nprogress .bar {
+  @apply !bg-main;
+}
+
+.Toastify__toast {
+  @apply p-0 text-white bg-white rounded-base pr-large;
+}
+
+.Toastify__toast-body {
+  @apply contents;
+}
+
+.Toastify__toast-body > div {
+  @apply flex items-center;
+}
+
+/* Custom checkbox styles */
+/* ::bofore */
+.custom-checkbox ~ label {
+  @apply before:content-[""] before:absolute before:-left-[15px] before:-translate-x-full before:top-1/2
+    before:-translate-y-1/2 before:w-[22px] before:h-[22px] before:border-[1.5px] before:rounded-[5px]
+    before:transition-colors;
+}
+/* ::after */
+.custom-checkbox ~ label {
+  @apply after:content-[""] after:absolute after:bg-no-repeat after:bg-white
+    after:-left-[20.5px] after:-translate-x-full after:top-1/2 after:-translate-y-1/2 after:w-[11px] after:h-2
+    after:transition-opacity after:opacity-0 transition-colors;
+}
+.custom-checkbox ~ label::after {
+  mask-image: url(../../shared/assets/icons/common/complete.svg);
+  mask-size: cover;
+  -webkit-mask-image: url(../../shared/assets/icons/common/complete.svg);
+  -webkit-mask-size: cover;
+}
+/* checkbox states */
+.custom-checkbox:not(:disabled) ~ label {
+  @apply cursor-pointer before:bg-white hover:before:border-main;
+}
+/* Вернуть, если понадобится CheckBox Group */
+/* .custom-checkbox-indeterminate ~ label {
+  @apply after:bg-main after:bg-none before:p-1 after:rounded-[1px] after:-left-[14.5px]
+        after:opacity-100 after:w-[6px] after:h-[6px];
+} */
+.custom-checkbox:checked ~ label {
+  @apply before:border-main before:bg-main after:opacity-100;
+}
+.custom-checkbox:disabled ~ label {
+  @apply cursor-not-allowed before:bg-background-secondary before:border-border;
+}
+.custom-checkbox:focus-visible ~ label {
+  @apply before:border-main;
+}
+/* Custom checkbox styles */
+
+/* Start Custom Date Range Picker styles */
+/* Вернуть, когда будет дизайн в ui kit */
+.rc-picker-dropdown,
+.rc-picker-panel-container {
+  @apply w-fit;
+}
+.rc-picker-panel {
+  @apply w-[380px] border border-border rounded-base p-large bg-white z-10;
+}
+.rc-picker-header {
+  @apply flex items-center gap-small px-1.5 mb-[18px];
+}
+.rc-picker-header-view {
+  @apply flex items-center flex-grow text-black -order-1 gap-extra-small text-h2;
+}
+.rc-picker-header-view > button {
+  @apply hover:text-main-secondary active:text-main;
+}
+.rc-picker-body tbody::before {
+  @apply content-['-'] block leading-[18px] text-transparent;
+}
+.rc-picker-body th {
+  @apply p-0 font-normal text-p text-text-secondary;
+}
+.rc-picker-body > table {
+  @apply w-full;
+}
+.rc-picker-panel td {
+  @apply p-0;
+}
+.rc-picker-date-panel td > div {
+  @apply w-[46px] h-[38px] mx-auto;
+}
+.rc-picker-month-panel td > div {
+  @apply w-[90px] h-10 mx-auto;
+}
+.rc-picker-year-panel td > div {
+  @apply w-20 h-10 mx-auto;
+}
+.rc-picker-decade-panel td > div {
+  @apply h-10;
+}
+.rc-picker-cell-inner {
+  @apply flex items-center justify-center w-full h-full transition-colors rounded-md cursor-pointer text-background-primary hover:bg-background-tertiary;
+}
+.rc-picker-cell-in-view > .rc-picker-cell-inner {
+  @apply text-black;
+}
+.rc-picker-cell-selected > .rc-picker-cell-inner {
+  @apply text-white bg-main;
+}
+/* End Custom Date Range Picker styles */
+
+/* Start Custom Select styles */
+.rc-select {
+  @apply relative inline-block w-full;
+}
+.rc-select-dropdown {
+  @apply absolute bg-white border border-border rounded-xl p-small;
+}
+.rc-select-dropdown-hidden {
+  @apply hidden;
+}
+.rc-select-selector {
+  @apply relative flex w-full;
+}
+.rc-select-selection-search {
+  @apply w-full;
+}
+.rc-select-selection-item,
+.rc-select-selection-placeholder {
+  @apply absolute pointer-events-none top-px left-1;
+}
+.rc-select-item-option {
+  @apply text-h4 text-black px-5 py-[10.5px] rounded-base;
+}
+.rc-select-item-option-active {
+  @apply bg-background-tertiary;
+}
+.rc-select-item-option-disabled {
+  @apply text-background-primary;
+}
+.rc-virtual-list-holder {
+  @apply !max-h-[212px]
+}
+.rc-virtual-list-holder-inner {
+  @apply flex flex-col gap-1;
+}
+.rc-virtual-list-scrollbar {
+  @apply !w-[5px] translate-x-full;
+}
+.rc-virtual-list-scrollbar-thumb {
+  @apply !w-0.5 !bg-background-primary !rounded-sm !left-[3px];
+}
+/* End Custom Select styles */
+
+/* Custom Table Styles */
+.rc-table-placeholder td {
+  @apply text-left;
+}
+
+/* End Custom Table Styles */
+
+
+/* Custom style switch mui */
+
+.MuiSwitch-colorSecondary.Mui-checked {
+  color: #fc7454 !important;
+}
+
+.MuiSwitch-colorSecondary.Mui-checked+.MuiSwitch-track {
+  background-color: #fc7454 !important;
+  opacity: 0.5;
+}
+
+.MuiSwitch-colorSecondary.Mui-disabled.Mui-checked {
+  opacity: 0.5;
+}
+
+.MuiTypography-root.MuiFormControlLabel-label {
+  white-space: nowrap;
+}
+
+.RaLayout-contentWithSidebar {
+  max-width: 100vw;
+  overflow: auto;
+}
+
+.MuiMenu-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.css-1lrtnrn-MuiButtonBase-root-MuiFab-root-RaCreateButton-root.RaCreateButton-floating {
+  color: black !important
+}
+
+.MuiButtonBase-root.MuiMenuItem-root {
+  padding: 6px 16px !important;
+  justify-content: start !important;
+}

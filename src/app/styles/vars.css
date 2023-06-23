@@ -1,0 +1,49 @@
+:root,
+::before,
+::after {
+  --black: 27 27 27;
+  --white: 255 255 255;
+  --text: 77 77 77;
+  --text-secondary: 101 102 111;
+  --main: 238 115 44;
+  --main-hover: 255 151 56;
+  --main-secondary: 255 240 230;
+  --secondary: 64 91 212;
+  --secondary-hover: 233 230 255;
+  --secondary-secondary: 87 106 142;
+  --background: 244 244 244;
+  --background-primary: 185 187 192;
+  --background-secondary: 249 249 250;
+  --background-tertiary: 239 239 241;
+  --background-quaternary: 237 239 246;
+  --red: 204 50 50;
+  --green: 39 180 26;
+  --border: 214 218 226;
+  --skeleton: 214 218 226;
+  --skeleton-highlight: 255 255 255;
+}
+
+.dark,
+dark::before,
+dark::after {
+  --black: 27 27 27;
+  --white: 255 255 255;
+  --text: 77 77 77;
+  --text-secondary: 101 102 111;
+  --main: 238 115 44;
+  --main-hover: 255 151 56;
+  --main-secondary: 255 240 230;
+  --secondary: 64 91 212;
+  --secondary-hover: 233 230 255;
+  --secondary-secondary: 87 106 142;
+  --background: 244 244 244;
+  --background-primary: 185 187 192;
+  --background-secondary: 249 249 250;
+  --background-tertiary: 239 239 241;
+  --background-quaternary: 237 239 246;
+  --red: 204 50 50;
+  --green: 39 180 26;
+  --border: 214 218 226;
+  --skeleton: 214 218 226;
+  --skeleton-highlight: 255 255 255;
+}

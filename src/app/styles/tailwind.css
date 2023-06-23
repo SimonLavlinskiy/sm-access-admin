@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply text-[1.75rem] leading-[2.125rem] font-bold;
+  }
+
+  h2 {
+    @apply text-xl font-semibold leading-6;
+  }
+
+  h3 {
+    @apply text-[1.0625rem] leading-[1.3125rem] font-semibold;
+  }
+
+  h4 {
+    @apply text-[1.0625rem] leading-[170%];
+  }
+
+  p {
+    @apply text-xs leading-5;
+  }
+
+  h5 {
+    @apply text-[0.5rem] leading-[0.625rem] font-bold;
+  }
+
+  a {
+    @apply text-secondary-secondary underline underline-offset-[3px] hover:no-underline active:text-black active:no-underline transition-colors
+  }
+
+  img {
+    @apply object-cover
+  }
+}
+
+@layer components {}
+
+@layer utilities {
+  /* Styled scrollBar for dropdown lists */
+  .scrollbar-list::-webkit-scrollbar {
+    @apply w-0.5;
+  }
+  .scrollbar-list::-webkit-scrollbar-thumb {
+    @apply bg-background-primary rounded-base;
+  }
+  .scrollbar-list::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+}

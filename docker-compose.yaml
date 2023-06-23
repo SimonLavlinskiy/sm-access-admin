@@ -1,0 +1,11 @@
+version: '3.4'
+services:
+  frontend:
+    image: ${CONTAINER_REGISTRY_BASE}/admin:${CONTAINER_VERSION}
+    platform: linux/amd64
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: prod
+    ports:
+      - '8888:80'

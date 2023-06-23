@@ -1,0 +1,14 @@
+import { render } from '@/jest/utils'
+import { composeStories } from '@storybook/testing-react'
+import * as stories from './{{name}}.stories'
+
+const { Default } = composeStories(stories)
+
+describe('{{pascalCase name}} Tests', () => {
+
+  it('{{pascalCase name}} should be render', () => {
+    const component = render(<Default/>)
+    expect(component.container).toBeInTheDocument()
+  })
+
+})
