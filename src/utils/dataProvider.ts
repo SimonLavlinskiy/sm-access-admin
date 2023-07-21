@@ -17,7 +17,7 @@ export const dataProvider = {
     try {
       const response = (await httpClient({ url: url })) as AxiosResponse
       return Promise.resolve({
-        data: response.data['devices'],
+        data: response.data[resource],
         total: response.data.totalItems,
       })
     } catch (err) {
@@ -35,7 +35,7 @@ export const dataProvider = {
       const response = (await httpClient({
         url: `${TARGET}/${resource}/${params?.id}`,
       })) as AxiosResponse
-      return Promise.resolve({ data: response.data.device })
+      return Promise.resolve({ data: response.data })
     } catch (err) {
       const error = err as AxiosError<any>
       return Promise.reject({
@@ -52,6 +52,7 @@ export const dataProvider = {
       for (const id of params.ids) {
         const url = id.id ? `${TARGET}/${resource}/${id.id}` : `${TARGET}/${resource}/${id}`
         const response = (await httpClient({ url })) as AxiosResponse
+        console.log(response)
         items.push(response.data)
       }
 

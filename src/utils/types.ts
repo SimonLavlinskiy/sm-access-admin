@@ -48,24 +48,8 @@ export type Roles =
   | typeof ROLE_DEFAULT
   | typeof ROLE_AUTO_ADMIN
 
-export interface User {
-  id: number
-  isAgreementAccepted: boolean
-  firstName: string
-  lastName: string
-  middleName: string
-  fullName: string
-  isRealEmail: boolean
+export interface User extends BaseEntity {
   username: string
-  enabled: boolean
-  email: string
-  roles: Roles[]
-  phone: string
-  isExternalUser: boolean
-  isEmailConfirmed: boolean
-  isPhoneConfirmed: boolean
-  isTelegramConfirmed: boolean
-  telegram: string
 }
 
 export type ObjectWithName = {
@@ -75,7 +59,7 @@ export type ObjectWithName = {
 }
 
 export interface BaseEntity {
-  id: number
+  id: string
   dateCreate: string
   dateUpdate: string
 }

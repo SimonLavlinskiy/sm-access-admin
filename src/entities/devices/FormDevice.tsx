@@ -1,40 +1,20 @@
-import { useEffect, useState } from 'react'
 import {
   TextInput,
-  NumberInput,
-  SelectInput,
-  DateInput,
   SimpleForm,
-  maxLength,
-  minLength,
   DeleteWithConfirmButton,
   Toolbar,
   SaveButton,
   useRecordContext,
-  required,
 } from 'react-admin'
-import {
-  driveTypeOptions,
-  ecoTypeOptions,
-  fuelTypeOptions,
-  transmissionTypeOptions,
-  typeOptions,
-  warrantyTypeOptions,
-} from './form-select-options'
-import { setAtomFromRecord } from '@/utils'
-import { useSetAtom, useAtomValue } from 'jotai'
-import { carImagesAtom } from './utils/utils'
 
 
 const FormDevice = (props: any) => {
-  const record = useRecordContext()
-
-
   return (
     <SimpleForm {...props} label='Создания устройства' toolbar={<EditToolbar />}>
-     
-    <TextInput fullWidth source='name' label='Название устройства' />
-    <TextInput fullWidth source='imei' label='IMEI' />
+      <TextInput fullWidth name='name' source='name' label='Название устройства'/>
+      <TextInput fullWidth name='imei' source='imei' label='IMEI'/>
+      <TextInput fullWidth name='os_version' source='os_version' label='Версия ОС' />
+      <TextInput fullWidth name='type' source='type' label='Тип'/>
     </SimpleForm>
   )
 }

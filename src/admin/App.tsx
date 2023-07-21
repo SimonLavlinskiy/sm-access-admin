@@ -10,6 +10,11 @@ import CreateDevice from '@/entities/devices/CreateDevice'
 import EditDevice from '@/entities/devices/EditDevice'
 import ShowDevice from '@/entities/devices/ShowDevice'
 import PhoneAndroidIcon from '@mui/icons-material/PhoneAndroid';
+import ListUser from "@/entities/users/ListUser";
+import CreateUser from "@/entities/users/CreateUser";
+import ShowUser from "@/entities/users/ShowUser";
+import UpdateUser from "@/entities/users/UpdateUser";
+
 
 export const App = () => {
   const queryClient = new QueryClient()
@@ -32,6 +37,15 @@ export const App = () => {
           create={CreateDevice}
           edit={EditDevice}
           show={ShowDevice}
+          icon={PhoneAndroidIcon}
+        />
+        <Resource
+          name='users'
+          options={{ label: 'Пользователи' }}
+          list={ListUser}
+          create={CreateUser}
+          edit={UpdateUser}
+          show={ShowUser}
           icon={PhoneAndroidIcon}
         />
       </Admin>
